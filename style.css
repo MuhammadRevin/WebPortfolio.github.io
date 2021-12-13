@@ -1,0 +1,269 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+} 
+/* HTML */
+html{
+    scroll-behavior: smooth;
+}
+
+/* HEADER */
+header {
+    height: 70px;
+    position: sticky;
+    top: 0;
+    display: flex;
+    background: #fff;
+    z-index: 9998;
+    border-bottom: 5px solid rgb(6, 65, 105);
+}
+header h1 {
+    display: inline-block;
+    float: left;
+    padding: 15px 1px;
+    text-transform: uppercase;
+}
+header h1 a{
+    transition: .3s;
+}
+header h1 a:hover{
+    color: rgb(6, 65, 105);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(6, 65, 105);
+}
+header ul {
+    float: right;
+}
+header ul li {
+    padding: 24px;
+    display: inline-block;
+}
+header ul li a{
+    transition: .3s;
+}
+header ul li a:hover{
+    color: rgb(6, 65, 105);
+    padding-bottom: 5px;
+    border-bottom: 2px solid rgb(6, 65, 105);
+}
+a{
+    text-decoration: none;
+}
+.itpln{
+    float: left;
+}
+
+/* LIST */
+.container{
+    width: 90%;
+    margin: 0 auto;
+}
+.container:after{
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* TAMPILAN MOBILE */
+.mobile-menu{
+    float: right;
+    display: none;
+    padding: 18px;
+}
+.mobile-menu:hover{
+    cursor: pointer;
+    color: #0077ff;
+}
+.mobile-menu i{
+  color: #04438b;
+}
+#check{
+    display: none;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: -300px;
+    width: 300px;
+    background-color: rgba(6, 65, 105, 0.9);
+    transition: .3s;
+    z-index: 9999;
+}
+.sidebar ul li a{
+    color: white;
+}
+.sidebar ul li{
+    padding: 24px;
+    transition: .3s;
+    transition-property: background-color;
+}
+.sidebar ul li:hover{
+    background-color: #4776ac;
+}
+#check:checked ~ .sidebar {
+    left: 0;
+}
+
+/* TAMPILAN BANNER */
+.banner{
+    background-color: #0077ff;
+}
+section{
+    padding: 45px 0;
+    text-align: center;
+}
+.banner img{
+    width: 350px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(6, 65, 105, 0.9);
+}
+.banner h2{
+    margin-bottom: 10px;
+    font-size: 35px;
+}
+
+section h3{
+    padding-bottom: 20px;
+    text-align: center;
+    margin: 40px;
+    color: black;
+    position: relative;
+    font-size: 26px;
+}
+section h3:before{
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 200px;
+    height: 1px;
+    background-color: black;
+    left: calc(50% - 100px);
+}
+section h3:after{
+    content:'';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 40px;
+    height: 4px;
+    background-color: black;
+    left: calc(50% - 20px);
+}
+
+/* TMAPILAN EFEK NGETIK */
+.efek-ngetik{
+    font-family: Georgia,"Times New Roman",Times,serif;
+    font-style: italic;
+}
+
+/*ABOUT*/
+#about,
+#portfolio{
+    background-color: rgb(239, 243, 247);
+}
+#about p{
+    text-align: center;
+    line-height: 25px;
+    margin-bottom: 15px;
+}
+
+/*SKILLS*/
+#skills,
+#contact {
+	background-color: #f9f9f9;
+}
+#skills .bar {
+	height: 30px;
+	background-color: #fff;
+	border:1px solid #ddd;
+	margin: 5px 0 20px 0;
+}
+.bar .nilai {
+	height:30px;
+	background-color: #0077ff;
+	display: inline-block;
+	color: #fff;
+	text-align: center;
+}
+.html {
+	width:70%;
+}
+.css {
+	width:70%;
+}
+.js {
+	width:70%;
+}
+.php {
+	width:70%;
+}
+
+/* PORTFOLIO */
+#portfolio p{
+    text-align: center;
+    line-height: 25px;
+    font-size: 25px;
+    margin-top: 50px;
+}
+.col-4{
+    width: 50%;
+    box-sizing: border-box;
+    padding: 30px;
+    float: left;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.col-4 img{
+    width: 100%;
+}
+.col-4 a:hover img{
+    transform: scale(1.2);
+}
+
+/* CONTACT */
+.col-3{
+    width: 33.33%;
+    box-sizing: border-box;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    padding: 50px 10px;
+}
+.col-3 h4{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 15px;
+}
+
+footer{
+    background-color: #0077ff;
+    padding: 30px;
+    text-align: center;
+}
+footer small{
+    color: #fff;
+}
+
+
+
+/* TAMPILAN MOBILE */
+@media (max-width: 910px){
+    .mobile-menu{
+        display: block;
+    }
+    header ul{
+        display: none;
+    }
+    .col-4{
+        width: 100%;
+    }
+    .col-3{
+        width: 100%;
+    }
+}
+
+
